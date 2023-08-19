@@ -1,6 +1,6 @@
 import IProducts from "../interfaces/product";
 
-export interface IFetchProducts {
+interface IFetchProducts {
     site_id: string
     country_default_time_zone: string
     query: string
@@ -9,7 +9,9 @@ export interface IFetchProducts {
 
 
 export default async function fetchProducts(query: string){
-    const response = await fetch(`htpps://api.mercadolibre.com/sites/MLB/search?q=${query}`);
+    // console.log("deef")
+
+    const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
     const data = await response.json() as IFetchProducts;
 
     return data.results;

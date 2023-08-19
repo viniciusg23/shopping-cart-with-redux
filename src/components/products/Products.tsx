@@ -9,12 +9,18 @@ function Products() {
 
     return ( 
         <div className="products-container">
-            <Product 
-                id={"123"}
-                title={"iPad 9ª Geração 10.2  Wi-fi 64gb Cinza-espacial Apple"}
-                thumbnail_id={"906272-MLA47916670099_102021"}
-                price={2144}
-            />
+            <div className="products-list">
+                {
+                    products.map((product) => (
+                        <Product 
+                            id={product.id}
+                            title={product.title}
+                            thumbnail_id={product.thumbnail_id}
+                            price={product.price}
+                        />
+                    ))
+                }
+            </div>
         </div>
     );
 }

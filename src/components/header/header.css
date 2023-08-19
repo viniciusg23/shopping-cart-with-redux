@@ -2,22 +2,26 @@
     color: white;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 header {
-    background-color: #764ABC;
-    padding: 1.2em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.buttons {
-    display: flex;
-    gap: 1.2em;
+.header-container {
+    background-color: #764ABC;
+    padding: 0.6em 1.5em 0.6em 1.5em;
 }
 
-.buttons a:hover {
-    cursor: pointer;
+.buttons {
+    display: flex;
+    gap: .3em;
 }
+
 
 .form-input{
     display: flex;
@@ -49,6 +53,10 @@ header {
     display: flex;
 }
 
+.form-control.sm {
+    display: none;
+}
+
 .form-control button {
     flex-grow: 1;
     border-radius: 0px 10px 10px 0px;
@@ -73,12 +81,6 @@ header {
     width: 25px;
 }
 
-
-/* .form-input img{
-    padding: 6px;
-    filter: invert(100%);
-} */
-
 .form-input input:focus {
     background-color: #ffffff25;
     outline: none;
@@ -87,4 +89,45 @@ header {
 .form-input input:not(:focus) {
     border-color: white;
     background-color: #764ABC00
+}
+
+.header-function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    border-radius: 100%;
+    transition: background-color 250ms ease;
+}
+
+
+.buttons img {
+    filter: invert(100%);
+    width: 32px;
+}
+
+
+
+.buttons a:hover {
+    cursor: pointer;
+    background-color: #00000025;
+}
+
+
+
+
+@media (max-width: 640px) {
+    .form-control.lg {
+        display: none;
+    }
+
+    .form-control.sm {
+        margin-top: .3em;
+        margin-bottom: .3em;
+        display: flex;
+    }
+
+    .sm input {
+        width: 80%;
+    }
 }

@@ -1,5 +1,16 @@
 .products-container {
-    width: 50%;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+}
+
+.products-list {
+    width: 80%;
+    max-width: 1600px;
+    display: flex;
+    gap: 2em;
     flex-wrap: wrap;
+    justify-content: center;
 }

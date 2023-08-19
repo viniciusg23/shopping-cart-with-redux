@@ -1,25 +1,93 @@
 .product-item {
     background-color: #fff;
     width: 250px;
+    height: 50vh;
     border-radius: 12px;
-    box-shadow: 0 0 1em rgb(201, 201, 201);
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.080);
+    transition: box-shadown 300ms ease;
+}
+
+.product-item:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.120);
+}
+
+
+.product-item hr {
+    border-color: #00000025;
 }
 
 .product-item-thumb {
-    padding-left: 20px;
-    padding-right: 20px;
+    height: 35vh;
+    height: auto;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 12px 12px 0px 0px;
+    position: relative;
 }
 
-.product-item-thumb img{
-    width: 200px; 
+.cart-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    background-color: white;
+    padding: 1em;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-icon img {
+    width: 36px;
+    transition: filter 0.2s ease;
+}
+
+.cart-icon:hover {
+    background-color: #764ABC;
+}
+
+.cart-icon:hover img {
+    filter: invert(100%);
+}
+
+
+.product-image {
+    /* width: 100%; */
+    height: 30vh;
+    transition: filter 0.3s ease;
+}
+
+.product-item:hover .cart-icon {
+    opacity: 1;
+}
+
+.product-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .product-hover {
+    opacity: 1; 
 }
 
 .product-item-info {
-    padding: 20px;
+    height: 30%;
+    margin-top: 1em;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     gap: .8em;
@@ -32,3 +100,15 @@
 .product-item-info span {
     color: #00000080;
 }
+
+.added {
+    background-color: green;
+}
+
+.added:hover {
+    background-color: green;
+}
+
+.added img {
+    filter: invert(100%);
+}   
